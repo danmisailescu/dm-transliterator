@@ -1,0 +1,17 @@
+F:\Stuff\My Projects\Romana cu litere chirilice si grecesti\RomanaLitereChiriliceSiGrecesti\bin\RomanaLitereChiriliceSiGrecesti.dll
+F:\Stuff\My Projects\Romana cu litere chirilice si grecesti\RomanaLitereChiriliceSiGrecesti\bin\RomanaLitereChiriliceSiGrecesti.pdb
+F:\Stuff\My Projects\Romana cu litere chirilice si grecesti\RomanaLitereChiriliceSiGrecesti\obj\Debug\RomanaLitereChiriliceSiGrecesti.csprojResolveAssemblyReference.cache
+F:\Stuff\My Projects\Romana cu litere chirilice si grecesti\RomanaLitereChiriliceSiGrecesti\obj\Debug\RomanaLitereChiriliceSiGrecesti.dll
+F:\Stuff\My Projects\Romana cu litere chirilice si grecesti\RomanaLitereChiriliceSiGrecesti\obj\Debug\RomanaLitereChiriliceSiGrecesti.pdb
+C:\Users\Bumbi\Google Drive\files\Projects Personal\transliteratie aug 2014\RomanaLitereChiriliceSiGrecesti\bin\RomanaLitereChiriliceSiGrecesti.dll.config
+C:\Users\Bumbi\Google Drive\files\Projects Personal\transliteratie aug 2014\RomanaLitereChiriliceSiGrecesti\bin\RomanaLitereChiriliceSiGrecesti.dll
+C:\Users\Bumbi\Google Drive\files\Projects Personal\transliteratie aug 2014\RomanaLitereChiriliceSiGrecesti\bin\RomanaLitereChiriliceSiGrecesti.pdb
+C:\Users\Bumbi\Google Drive\files\Projects Personal\transliteratie aug 2014\RomanaLitereChiriliceSiGrecesti\obj\Debug\RomanaLitereChiriliceSiGrecesti.csprojResolveAssemblyReference.cache
+C:\Users\Bumbi\Google Drive\files\Projects Personal\transliteratie aug 2014\RomanaLitereChiriliceSiGrecesti\obj\Debug\RomanaLitereChiriliceSiGrecesti.dll
+C:\Users\Bumbi\Google Drive\files\Projects Personal\transliteratie aug 2014\RomanaLitereChiriliceSiGrecesti\obj\Debug\RomanaLitereChiriliceSiGrecesti.pdb
+D:\gDrive\files\Projects Personal\RomanaLitereChiriliceSiGrecesti - 13 aug 2014\bin\RomanaLitereChiriliceSiGrecesti.dll.config
+D:\gDrive\files\Projects Personal\RomanaLitereChiriliceSiGrecesti - 13 aug 2014\bin\RomanaLitereChiriliceSiGrecesti.dll
+D:\gDrive\files\Projects Personal\RomanaLitereChiriliceSiGrecesti - 13 aug 2014\bin\RomanaLitereChiriliceSiGrecesti.pdb
+D:\gDrive\files\Projects Personal\RomanaLitereChiriliceSiGrecesti - 13 aug 2014\obj\Debug\RomanaLitereChiriliceSiGrecesti.csprojResolveAssemblyReference.cache
+D:\gDrive\files\Projects Personal\RomanaLitereChiriliceSiGrecesti - 13 aug 2014\obj\Debug\RomanaLitereChiriliceSiGrecesti.dll
+D:\gDrive\files\Projects Personal\RomanaLitereChiriliceSiGrecesti - 13 aug 2014\obj\Debug\RomanaLitereChiriliceSiGrecesti.pdb

@@ -1,0 +1,6 @@
+F:\Stuff\My Projects\RomanaLitereChiriliceSiGrecesti - 22 oct 2014 FFINAL\bin\Transliterator.dll.config
+F:\Stuff\My Projects\RomanaLitereChiriliceSiGrecesti - 22 oct 2014 FFINAL\bin\Transliterator.dll
+F:\Stuff\My Projects\RomanaLitereChiriliceSiGrecesti - 22 oct 2014 FFINAL\bin\Transliterator.pdb
+F:\Stuff\My Projects\RomanaLitereChiriliceSiGrecesti - 22 oct 2014 FFINAL\obj\Debug\Transliterator.csprojResolveAssemblyReference.cache
+F:\Stuff\My Projects\RomanaLitereChiriliceSiGrecesti - 22 oct 2014 FFINAL\obj\Debug\Transliterator.dll
+F:\Stuff\My Projects\RomanaLitereChiriliceSiGrecesti - 22 oct 2014 FFINAL\obj\Debug\Transliterator.pdb

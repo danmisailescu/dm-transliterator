@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17E18F17-87EE-4F00-B0D9-05616670272E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RomanaLitereChiriliceSiGrecesti</RootNamespace>
+    <AssemblyName>Transliterator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main.css">
+      <DependentUpon>main.less</DependentUpon>
+    </Content>
+    <Content Include="main.min.css">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="scripts\dependencies\angular.js" />
+    <Content Include="scripts\mainCtrl.js" />
+    <Content Include="scripts\transliterationSrv.js" />
+    <Content Include="Transliterator_app.html" />
+    <Content Include="start.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="styles\images\1-vertical-marginimea-sibiului.png" />
+    <Content Include="styles\images\2-vertical-marginimea-sibiului.png" />
+    <Content Include="styles\images\orizontal-marginimea-sibiului.png" />
+    <Content Include="styles\site.css" />
+    <Content Include="styles\site.min.css" />
+    <Content Include="styles\tr-variables.css">
+      <DependentUpon>tr-variables.less</DependentUpon>
+    </Content>
+    <Content Include="web.config" />
+    <Content Include="styles\bs\alerts.less" />
+    <Content Include="styles\bs\badges.less" />
+    <Content Include="styles\bs\bootstrap.less" />
+    <Content Include="styles\bs\breadcrumbs.less" />
+    <Content Include="styles\bs\button-groups.less" />
+    <Content Include="styles\bs\buttons.less" />
+    <Content Include="styles\bs\carousel.less" />
+    <Content Include="styles\bs\close.less" />
+    <Content Include="styles\bs\code.less" />
+    <Content Include="styles\bs\component-animations.less" />
+    <Content Include="styles\bs\dropdowns.less" />
+    <Content Include="styles\bs\forms.less" />
+    <Content Include="styles\bs\glyphicons.less" />
+    <Content Include="styles\bs\grid.less" />
+    <Content Include="styles\bs\input-groups.less" />
+    <Content Include="styles\bs\jumbotron.less" />
+    <Content Include="styles\bs\labels.less" />
+    <Content Include="styles\bs\list-group.less" />
+    <Content Include="styles\bs\media.less" />
+    <Content Include="styles\bs\mixins.less" />
+    <Content Include="styles\bs\mixins\alerts.less" />
+    <Content Include="styles\bs\mixins\background-variant.less" />
+    <Content Include="styles\bs\mixins\border-radius.less" />
+    <Content Include="styles\bs\mixins\buttons.less" />
+    <Content Include="styles\bs\mixins\center-block.less" />
+    <Content Include="styles\bs\mixins\clearfix.less" />
+    <Content Include="styles\bs\mixins\forms.less" />
+    <Content Include="styles\bs\mixins\gradients.less" />
+    <Content Include="styles\bs\mixins\grid-framework.less" />
+    <Content Include="styles\bs\mixins\grid.less" />
+    <Content Include="styles\bs\mixins\hide-text.less" />
+    <Content Include="styles\bs\mixins\image.less" />
+    <Content Include="styles\bs\mixins\labels.less" />
+    <Content Include="styles\bs\mixins\list-group.less" />
+    <Content Include="styles\bs\mixins\nav-divider.less" />
+    <Content Include="styles\bs\mixins\nav-vertical-align.less" />
+    <Content Include="styles\bs\mixins\opacity.less" />
+    <Content Include="styles\bs\mixins\pagination.less" />
+    <Content Include="styles\bs\mixins\panels.less" />
+    <Content Include="styles\bs\mixins\progress-bar.less" />
+    <Content Include="styles\bs\mixins\reset-filter.less" />
+    <Content Include="styles\bs\mixins\resize.less" />
+    <Content Include="styles\bs\mixins\responsive-visibility.less" />
+    <Content Include="styles\bs\mixins\size.less" />
+    <Content Include="styles\bs\mixins\tab-focus.less" />
+    <Content Include="styles\bs\mixins\table-row.less" />
+    <Content Include="styles\bs\mixins\text-emphasis.less" />
+    <Content Include="styles\bs\mixins\text-overflow.less" />
+    <Content Include="styles\bs\mixins\vendor-prefixes.less" />
+    <Content Include="styles\bs\modals.less" />
+    <Content Include="styles\bs\navbar.less" />
+    <Content Include="styles\bs\navs.less" />
+    <Content Include="styles\bs\normalize.less" />
+    <Content Include="styles\bs\pager.less" />
+    <Content Include="styles\bs\pagination.less" />
+    <Content Include="styles\bs\panels.less" />
+    <Content Include="styles\bs\popovers.less" />
+    <Content Include="styles\bs\print.less" />
+    <Content Include="styles\bs\progress-bars.less" />
+    <Content Include="styles\bs\responsive-embed.less" />
+    <Content Include="styles\bs\responsive-utilities.less" />
+    <Content Include="styles\bs\scaffolding.less" />
+    <Content Include="styles\bs\tables.less" />
+    <Content Include="styles\bs\theme.less" />
+    <Content Include="styles\bs\thumbnails.less" />
+    <Content Include="styles\bs\tooltip.less" />
+    <Content Include="styles\bs\type.less" />
+    <Content Include="styles\bs\utilities.less" />
+    <Content Include="styles\bs\variables.less" />
+    <Content Include="styles\bs\wells.less" />
+    <Content Include="styles\site.less" />
+    <Content Include="styles\tr-variables.less" />
+    <Content Include="styles\_positioning.less" />
+    <Content Include="main.less" />
+    <Content Include="styles\site.css.map">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="main.css.map">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4695/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
