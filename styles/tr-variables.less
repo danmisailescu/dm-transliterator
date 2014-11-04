@@ -1,0 +1,50 @@
+﻿// Bs override
+// -------------------------
+
+@brand-primary: #38cee9;
+@brand-success: #83d128;
+@brand-info: #ffcc00;
+@brand-warning: #ff8f00;
+@brand-danger: #ea5046;
+@headings-font-weight: 100;
+
+// tr specific
+// -------------------------
+//@imgRo-url: "";
+//@imgCr-url: "";
+//@imgGr-url: "";
+//@logo-url: "";
+
+// *** tk Mixins *** //
+
+.transition-all(@size: 200ms) {
+    -moz-transition: all @size;
+    -o-transition: all @size;
+    -webkit-transition: all @size;
+    transition: all @size;
+}
+
+.transition(@values: background 0.1s linear) {
+    -moz-transition: @values;
+    -o-transition: @values;
+    -webkit-transition: @values;
+    transition: @values;
+}
+
+.box-shadow (@string: 0 8px 10px rgba(0, 0, 0, 0.175)) {
+    -webkit-box-shadow: @string;
+    -moz-box-shadow: @string;
+    box-shadow: @string;
+}
+
+@shady-borders: 0 0 0 1px rgba(0, 0, 0, 0.06) inset;
+@bottom-accent-sm: 0 1px 1px -2px rgb(0, 0, 0);
+@bottom-accent: 0 3px 2px -2px rgb(219, 219, 219);
+
+.animation(@name: anim, @duration: 300ms, @timing-function: ease, @delay: 0s, @iteration-count: 1, @direction: normal, @fill-mode: none, @play-state: running) {
+    -webkit-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode @play-state;
+    -moz-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode @play-state;
+    -ms-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode @play-state;
+    -o-animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode @play-state;
+    animation: @name @duration @timing-function @delay @iteration-count @direction @fill-mode @play-state;
+}

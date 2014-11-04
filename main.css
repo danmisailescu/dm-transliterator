@@ -2700,6 +2700,9 @@ input[type="button"].btn-block {
   /*text-shadow: 1px 1px 0px #000;*/
   position: relative;
 }
+.tr-subheader {
+  padding-left: 10px;
+}
 .tr.row {
   margin-left: -5px;
   margin-right: -5px;
@@ -2903,13 +2906,19 @@ fieldset[disabled] .btn-selected.active {
   .tr-header {
     font-size: 15px;
   }
+  .tr-subheader {
+    font-size: 12px;
+  }
   textarea.form-control.tr-textarea {
     height: 150px;
   }
 }
 @media (min-width: 768px) {
   .tr-header {
-    font-size: 20px;
+    font-size: 24px;
+  }
+  .tr-subheader {
+    font-size: 17px;
   }
 }
 @media (min-width: 992px) {
@@ -2917,7 +2926,10 @@ fieldset[disabled] .btn-selected.active {
     height: 250px;
   }
   .tr-header {
-    font-size: 20px;
+    font-size: 24px;
+  }
+  .tr-subheader {
+    font-size: 17px;
   }
 }
 @media (min-width: 1200px) {
