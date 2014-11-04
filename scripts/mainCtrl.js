@@ -5,7 +5,7 @@ romanianChyrilicAndGreekModule.controller("MainCtrl",
         function ($scope, transliterationSrv) {
 
             $scope.texts = {
-                pageTitle: "(Limba Română cu litere chirilice și grecești - Write romanian with cyrillic and greek letters)",
+                pageDescription: "(Limba Română cu litere chirilice și grecești - Write romanian with cyrillic and greek letters)",
                 placeHolderRomanianLetters: "Textul scris cu litere românești...",
                 placeHolderGreekLetters: "Textul scris cu litere grecești (γρεκεσχτι)...",
                 placeHolderChyrilicLetters: "Textul scris cu litere chirilice (кирилике)..."
