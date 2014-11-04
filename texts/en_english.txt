@@ -1,1 +1,2 @@
-﻿Deoarece suntem Români şi cei care scriem cu grafie latină, şi cei care scriem cu litere chirilice sau greceşti, am făcut acest program prin care să putem fi mai uniţi, noi toţi ce vorbim aceeaşi limbă. Să vă fie spre folos!
+﻿Because we are Romanians whether we write in a latin , chirilic, or greek alphabet, I created this application to bring us closer together, us who speak the same language. 
+Hope this will be useful for you as well.
