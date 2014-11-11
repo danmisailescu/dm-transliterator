@@ -10,3 +10,9 @@ C:\WorkGit\transliterator\bin\Transliterator.pdb
 C:\WorkGit\transliterator\obj\Debug\Transliterator.csprojResolveAssemblyReference.cache
 C:\WorkGit\transliterator\obj\Debug\Transliterator.dll
 C:\WorkGit\transliterator\obj\Debug\Transliterator.pdb
+E:\transliterator\bin\Transliterator.dll.config
+E:\transliterator\bin\Transliterator.dll
+E:\transliterator\bin\Transliterator.pdb
+E:\transliterator\obj\Debug\Transliterator.csprojResolveAssemblyReference.cache
+E:\transliterator\obj\Debug\Transliterator.dll
+E:\transliterator\obj\Debug\Transliterator.pdb

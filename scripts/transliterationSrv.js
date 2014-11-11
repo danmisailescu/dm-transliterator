@@ -100,6 +100,7 @@ romanianChyrilicAndGreekModule.factory('transliterationSrv',
             corespondingLetter['Th'] = 'Θ';
             corespondingLetter['TH'] = 'Θ';
             corespondingLetter['ț'] = 'τσ';
+            corespondingLetter['ţ'] = 'τσ';
             corespondingLetter['u'] = 'ου';
             corespondingLetter['v'] = 'β';
             corespondingLetter['w'] = 'β';
@@ -170,6 +171,7 @@ romanianChyrilicAndGreekModule.factory('transliterationSrv',
             corespondingLetter['Ş'] = 'Σχ';
             corespondingLetter['T'] = 'Τ';
             corespondingLetter['Ț'] = 'Τσ';
+            corespondingLetter['Ţ'] = 'Τσ';
             corespondingLetter['U'] = 'Ου';
             corespondingLetter['V'] = 'Β';
             corespondingLetter['W'] = 'Β';

@@ -1,2 +1,4 @@
-﻿Because we are Romanians whether we write in a latin , chirilic, or greek alphabet, I created this application to bring us closer together, us who speak the same language. 
-Hope this will be useful for you as well.
+﻿Because we are Romanians, both those who write using the latin alphabet 
+and those who write using cyrillic or greek letters, I created this program 
+to help all of us, who speak the same language be more united. 
+I hope this will, be useful to you! 
