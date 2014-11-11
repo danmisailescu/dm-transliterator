@@ -1,4 +1,4 @@
-transliterator
+DM Transliterator
 ==============
 
 Dan Misailescu (DM) Transliterator is an application that allows you to write romanian language with cyrillic and greek letters. 
