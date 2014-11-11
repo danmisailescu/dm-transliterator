@@ -15,3 +15,6 @@ Dan Misailescu (DM) Transliterator is an application that allows you to write ro
 
 <b>English</b><br/>
 "Because we are Romanians, both those who write using the latin alphabet and those who write using cyrillic or greek  letters, I created this program to help all of us, who speak the same language be more united. I hope this will, help you!"
+
+Dan Misailescu,
+http://ro.linkedin.com/in/danmisailescu
