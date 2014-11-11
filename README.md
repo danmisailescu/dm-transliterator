@@ -1,7 +1,8 @@
 transliterator
 ==============
 
-Transliterator is an application that allows writing romanian language using cyrillic and greek alphabet. All you need is a browser, and you can also use it offline because the application consists of a single HTML file containing an AngularJS javascript application and all the needed markup and styles.
+Transliterator is an application that allows you to write romanian language with cyrillic and greek letters. 
+<br/>All you need is a browser, and you can also use it offline because the application consists of a single HTML file that contains an AngularJS JavaScript application.
 
 <b>Limba Română - Romanian</b><br/>
 "Deoarece suntem Români şi cei care scriem cu grafie latină, şi cei care scriem cu litere chirilice sau greceşti, am făcut acest program prin care să putem fi mai uniţi, noi toţi ce vorbim aceeaşi limbă. Să vă fie spre folos!"
