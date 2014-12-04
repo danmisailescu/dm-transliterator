@@ -10,7 +10,7 @@
     
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH8rAP9/KwD/fysA/38rAP8AAAAAFtH8/wAAAAAAAAAAAAAAABbR/P8AAAAAJhHO/yYRzv8AAAAAAAAAACYRzv9/KwD/AAAAAAAAAAAAAAAAAAAAABbR/P8UuN7/AAAAABS43kgW0fz/AAAAAAAAAAAmEc7/AAAAAAAAAAAmEc7/fysA/wAAAAAAAAAAAAAAAAAAAAAAAAAAFtH8/wAAAAAW0fz/FLje/wAAAAAAAAAAJhHO/wAAAAAAAAAAJhHO/38rAP8AAAAAAAAAAAAAAAAAAAAAAAAAABbR/P8AAAAAFtH8/wAAAAAAAAAAAAAAACYRzv8AAAAAAAAAACYRzv9/KwD/AAAAAAAAAAAAAAAAAAAAAAAAAAAW0fz/FtH8/xbR/P8AAAAAAAAAAAAAAAAmEc7/AAAAAAAAAAAmEc7/fysA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABbR/P8AAAAAAAAAAAAAAAAAAAAAJhHO/yYRzv8mEc7/JhHO/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD//wAA//8AAP//AAALpgAAebYAAH02AAB9dgAAfHYAAH7wAAD//wAA//8AAP//AAD//wAA//8AAA==" rel="icon" type="image/x-icon" />
 
-    <title>Transliterator - Scrie limba română cu litere chirilice și grecești - Write romanian language with cyrillic and greek letters</title>
+    <title> DM Transliterator</title>
 
     <link rel="stylesheet" href="main.min.css">
     
@@ -26,7 +26,7 @@
                 <div class="container-logo">
                     <i class="logo"></i>
                 </div>
-                Transliterator
+                DM Transliterator - by Dan Misailescu
                 <span class="text-muted tr-subheader">{{texts.pageDescription}}</span>
             </h1>
 
@@ -49,7 +49,7 @@
                     <div class="tr-title-container">
                         <h4 class="tr-title">Кириллица - Лимба Ромынэ</h4>
                     </div>
-                    <textarea placeholder="{{texts.placeHolderChyrilicLetters}}" ng-model="chyrilicLettersText" ng-change="writeWithRomanianAndGreekLettersFromChyrilic()" class="form-control tr-textarea"></textarea>
+                    <textarea ng-disable="true" placeholder="{{texts.placeHolderChyrilicLetters}}" ng-model="chyrilicLettersText" ng-change="writeWithRomanianAndGreekLettersFromChyrilic()" class="form-control tr-textarea"></textarea>
                     <div class="model-pattern-container">
                         <div class="model-pattern cr"></div>
                     </div>

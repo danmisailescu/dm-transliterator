@@ -71,8 +71,7 @@
     <Content Include="scripts\transliterationSrv.js" />
     <Content Include="texts\en_english.txt" />
     <Content Include="texts\ro_romanian.txt" />
-    <Content Include="DmTransliterator_app.html" />
-    <Content Include="start.html" />
+    <Content Include="dm-transliterator.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="styles\images\1-vertical-marginimea-sibiului.png" />
