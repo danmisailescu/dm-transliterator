@@ -15,7 +15,7 @@ romanianChyrilicAndGreekModule.factory('textsSrv',
                 romanian: {
                     title: "Română (Romanian) - Scrie limba română cu litere chirilice și grecești",
                     descriptionRo: "Deoarece suntem Români şi cei care scriem cu grafie latină, şi cei care scriem cu litere chirilice sau greceşti, am făcut acest program prin care să putem fi mai uniţi, noi toţi ce vorbim aceeaşi limbă. Să vă fie spre folos!",
-                    descriptionCh: "Деоареке сунтем Ромыни ши кей каре скрйем ку графйе латинэ, ши кей каре скрйем ку литере кирилике сау грекешти, ам фэкут акест програм прин каре сэ путем фи май униţи, ной тоţи ке ворбим акеяши лимбэ. Сэ вэ фйе спре фолос!",
+                    descriptionCh: "Деоареке сунтем Ромыни ши кей каре скрйем ку графйе латинэ, ши кей каре скрйем ку литере кирилике сау грекешти, ам фэкут акест програм прин каре сэ путем фи май уници, ной тоци ке ворбим акеяши лимбэ. Сэ вэ фйе спре фолос!",
                     descriptionGr: "Ντεοαρεκε σουντεμ Ρομανι σχι κει καρε σκριεμ κου γραφιε λατινα, σχι κει καρε σκριεμ κου λιτερε κιριλικε σαου γρεκεσχτι, αμ φακουτ ακεστ προγραμ πριν καρε σα πουτεμ φι μαι ουνιτσι, νόι τοτσι κε βορμπιμ ακεεασχι λιμπα. Σα βα φιε σπρε φολος!"
                 },
                 english: {
