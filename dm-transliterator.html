@@ -16,8 +16,8 @@
     
     <script src="scripts/dependencies/angular.min.js"></script>
     <script src="scripts/mainCtrl.js"></script>
+    <script src="scripts/textsSrv.js"></script>
     <script src="scripts/transliterationSrv.js"></script>
-
 </head>
 <body ng-controller="MainCtrl">
     <div>
@@ -26,8 +26,8 @@
                 <div class="container-logo">
                     <i class="logo"></i>
                 </div>
-                DM Transliterator - by Dan Misailescu
-                <span class="text-muted tr-subheader">{{texts.pageDescription}}</span>
+                {{texts.applicationName}}
+                <span class="text-muted tr-subheader">{{texts.author}}</span>
             </h1>
 
         </header>
@@ -37,7 +37,7 @@
             <div class="tr row">
                 <div class="tr col-lg-4 col-md-4 col-sm-12 mrg-down2">
                     <div class="tr-title-container">
-                        <h4 class="tr-title">Limba Română</h4>
+                        <h4 class="tr-title">{{texts.titleRomanianLetters}}</h4>
                     </div>
                     <textarea placeholder="{{texts.placeHolderRomanianLetters}}" ng-model="romanianLettersText" ng-change="writeWithChyrilicAndGreekLettersFromRomanian()" class="form-control tr-textarea"></textarea>
                     <div class="model-pattern-container">
@@ -47,7 +47,7 @@
 
                 <div class="tr col-lg-4 col-md-4 col-sm-12 mrg-down2">
                     <div class="tr-title-container">
-                        <h4 class="tr-title">Кириллица - Лимба Ромынэ</h4>
+                        <h4 class="tr-title">{{texts.titleChyrilicLetters}}</h4>
                     </div>
                     <textarea ng-disable="true" placeholder="{{texts.placeHolderChyrilicLetters}}" ng-model="chyrilicLettersText" ng-change="writeWithRomanianAndGreekLettersFromChyrilic()" class="form-control tr-textarea"></textarea>
                     <div class="model-pattern-container">
@@ -57,7 +57,7 @@
 
                 <div class="tr col-lg-4 col-md-4 col-sm-12 mrg-down2">
                     <div class="tr-title-container">
-                        <h4 class="tr-title">Ελληνικά - Λιμπα Ρομανα</h4>
+                        <h4 class="tr-title">{{texts.titleGreekLetters}}</h4>
                     </div>
                     <textarea placeholder="{{texts.placeHolderGreekLetters}}" ng-model="greekLettersText" ng-change="writeWithRomanianAndChyrilicLettersFromGreek()" class="form-control tr-textarea"></textarea>
                     <div class="model-pattern-container">
@@ -80,17 +80,17 @@
                                                   width="auto" height="auto" alt="romanian flag" />
                                 </div>
 
-                                <span class="D-block">Română</span>
+                                <span class="D-block">{{texts.about.romanian.title}}</span>
                             </h3>
                         </div>
                         <div class="panel-body tr">
-                            Deoarece suntem Români şi cei care scriem cu grafie latină, şi cei care scriem cu litere chirilice sau greceşti, am făcut acest program prin care să putem fi mai uniţi, noi toţi ce vorbim aceeaşi limbă. Să vă fie spre folos!                       
+                            {{texts.about.romanian.descriptionRo}}                       
                             <br />
                             <br />
-                            Деоареке сунтем Ромыни ши кей каре скрйем ку графйе латинэ, ши кей каре скрйем ку литере кирилике сау грекешти, ам фэкут акест програм прин каре сэ путем фи май униţи, ной тоţи ке ворбим акеяши лимбэ. Сэ вэ фйе спре фолос!
+                            {{texts.about.romanian.descriptionCh}}
                             <br />
                             <br />
-                            Ντεοαρεκε σουντεμ Ρομανι σχι κει καρε σκριεμ κου γραφιε λατινα, σχι κει καρε σκριεμ κου λιτερε κιριλικε σαου γρεκεσχτι, αμ φακουτ ακεστ προγραμ πριν καρε σα πουτεμ φι μαι ουνιτσι, νόι τοτσι κε βορμπιμ ακεεασχι λιμπα. Σα βα φιε σπρε φολος!
+                            {{texts.about.romanian.descriptionGr}}
                         </div>
                     </div>
 
@@ -100,13 +100,30 @@
 
                                 <div class="flag">
                                     <!--en--><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAUCAYAAADhj08IAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpEREYxMzc0QzNFMjVFNDExQTEzOUJGMjE2MTdBNkZBMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5MTBCRjBDNjI1NDgxMUU0QkFFM0FGOTQ1QzE0NTU5OCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5MTBCRjBDNTI1NDgxMUU0QkFFM0FGOTQ1QzE0NTU5OCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkRFRjEzNzRDM0UyNUU0MTFBMTM5QkYyMTYxN0E2RkEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkRERjEzNzRDM0UyNUU0MTFBMTM5QkYyMTYxN0E2RkEzIi8+IDwvcmRmOkRlc2NyaXB0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"
-                                                  width="auto" height="auto" alt="us and uk flag" />
+                                                  width="auto" height="auto" alt="US and UK flag" />
                                 </div>
-                                <span style="display:block">English</span>
+                                <span style="display:block">{{texts.about.english.title}}</span>
                             </h3>
                         </div>
                         <div class="panel-body tr">
-                            Because we are Romanians, both those who write using the latin alphabet and those who write using cyrillic or greek letters, I created this program to help all of us, who speak the same language, be more united. I hope this will be useful to you! 
+                            {{texts.about.english.description}}
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default tr">
+                        <div class="panel-heading tr">
+                            <h3 class="panel-title tr">
+
+                                <div class="flag">
+                                    <!--ru--><img src="data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MSA2NC4xNDA5NDksIDIwMTAvMTIvMDctMTA6NTc6MDEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUuMSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkRBRDZDQ0FBMjcxNzExRTRBNDU3Rjc5RUEwMTM4REY2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkRBRDZDQ0FCMjcxNzExRTRBNDU3Rjc5RUEwMTM4REY2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REFENkNDQTgyNzE3MTFFNEE0NTdGNzlFQTAxMzhERjYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REFENkNDQTkyNzE3MTFFNEE0NTdGNzlFQTAxMzhERjYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgICAgICAgICAgIDAwMDAwMDAwMDAQEBAQEBAQIBAQICAgECAgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP/wAARCAAUACYDAREAAhEBAxEB/8QApQABAQEAAwAAAAAAAAAAAAAAAAQCCAoLAQEAAQUBAAAAAAAAAAAAAAAAAgEDBgcKCBAAAAMDBQ0IAwAAAAAAAAAAAQIDABEE0wUGBwkhMVFTFKRllSaWGFgZcYETVBUlFggjNDURAAACAwYQDAcAAAAAAAAAAAABEQIGURIlBwgZITGh0eFikqIDU2PTBAWVFzJSE5MUJBVVFlZmCUFhInIjM0X/2gAMAwEAAhEDEQA/AO2+e11szEjnTU+7VQJFEzGIchqaQwCU5BEpiiHhXBKIObbBRFRwGSSZ3WaDyR1xh5t+xhGg9Y6Mn7rAz1eLMnncqA31hpJq7iY4fLus+aOuG8Bi+8tGurAdXizJ53KgN9YaSZuJjh8u6z5o64bwGL7y0a6sB1eLMnncqA31hpJm4mOHy7rPmjrhvAYvvLRrqwNFtdbMw4HMX7tVAmBIoHUEKaQziEE5EwMb8VwBUUKHaLUOIqOAkEbO6zo5I64eP2MP+jo11YHmeTnUBTgZynAQCY3DGxYh7mneFdQcU3pxT3N5MmDULBreJXypERwafwoY4bUmgJX+F/IqbKPVqJQsrSOjiRFw/wBOcExazTkmnOdSY/UuzTzwTPksB1lNrK5gOH+nOCYtZpyTJzqTH6l2aeeCZ8lgOsptZXMBw/05wTFrNOSZOdSY/UuzTzwTPksB1lNrK5gWwlQFOAQnMHTHdgkwD3NO/wCozeOKwA0Fvc3kyLGqsXiVCppODTcMsc6ZBNASv1PpM2UStQKFladPEuEY52R/x7Lo1/rT8sifI487u9zc/S/R35pf0zcdHTzo/aXIKI5DgK8dwhJs7prMWj1a3qC7CeQvw2d01mLOrW9QITyF+GzumsxZ1a3qBCeQvxXDfHvBj/7TsjI/9Hz8C7uaSvR0LcOl8nSFrCdpP8H+hL+34iw//9k="
+                                             width="auto" height="auto" alt="Russian flag" />
+
+                                </div>
+                                <span style="display:block">{{texts.about.russian.title}}</span>
+                            </h3>
+                        </div>
+                        <div class="panel-body tr">
+                            {{texts.about.russian.description}}
                         </div>
                     </div>
 
@@ -171,15 +188,7 @@
                                     <img src="data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MSA2NC4xNDA5NDksIDIwMTAvMTIvMDctMTA6NTc6MDEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUuMSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI4RDAzMzM4MjcxQTExRTRCOTZCOTA1RUE1QkM0NDJDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI4RDAzMzM5MjcxQTExRTRCOTZCOTA1RUE1QkM0NDJDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjhEMDMzMzYyNzFBMTFFNEI5NkI5MDVFQTVCQzQ0MkMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjhEMDMzMzcyNzFBMTFFNEI5NkI5MDVFQTVCQzQ0MkMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEB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"
                                          width="auto" height="auto" alt="Macedonian flag" />
                                 </div>
-
-
-                                <div class="flag">
-
-                                    <img src="data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MSA2NC4xNDA5NDksIDIwMTAvMTIvMDctMTA6NTc6MDEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUuMSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkRBRDZDQ0FBMjcxNzExRTRBNDU3Rjc5RUEwMTM4REY2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkRBRDZDQ0FCMjcxNzExRTRBNDU3Rjc5RUEwMTM4REY2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REFENkNDQTgyNzE3MTFFNEE0NTdGNzlFQTAxMzhERjYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REFENkNDQTkyNzE3MTFFNEE0NTdGNzlFQTAxMzhERjYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgICAgICAgICAgIDAwMDAwMDAwMDAQEBAQEBAQIBAQICAgECAgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP/wAARCAAUACYDAREAAhEBAxEB/8QApQABAQEAAwAAAAAAAAAAAAAAAAQCCAoLAQEAAQUBAAAAAAAAAAAAAAAAAgEDBgcKCBAAAAMDBQ0IAwAAAAAAAAAAAQIDABEE0wUGBwkhMVFTFKRllSaWGFgZcYETVBUlFggjNDURAAACAwYQDAcAAAAAAAAAAAABEQIGURIlBwgZITGh0eFikqIDU2PTBAWVFzJSE5MUJBVVFlZmCUFhInIjM0X/2gAMAwEAAhEDEQA/AO2+e11szEjnTU+7VQJFEzGIchqaQwCU5BEpiiHhXBKIObbBRFRwGSSZ3WaDyR1xh5t+xhGg9Y6Mn7rAz1eLMnncqA31hpJq7iY4fLus+aOuG8Bi+8tGurAdXizJ53KgN9YaSZuJjh8u6z5o64bwGL7y0a6sB1eLMnncqA31hpJm4mOHy7rPmjrhvAYvvLRrqwNFtdbMw4HMX7tVAmBIoHUEKaQziEE5EwMb8VwBUUKHaLUOIqOAkEbO6zo5I64eP2MP+jo11YHmeTnUBTgZynAQCY3DGxYh7mneFdQcU3pxT3N5MmDULBreJXypERwafwoY4bUmgJX+F/IqbKPVqJQsrSOjiRFw/wBOcExazTkmnOdSY/UuzTzwTPksB1lNrK5gOH+nOCYtZpyTJzqTH6l2aeeCZ8lgOsptZXMBw/05wTFrNOSZOdSY/UuzTzwTPksB1lNrK5gWwlQFOAQnMHTHdgkwD3NO/wCozeOKwA0Fvc3kyLGqsXiVCppODTcMsc6ZBNASv1PpM2UStQKFladPEuEY52R/x7Lo1/rT8sifI487u9zc/S/R35pf0zcdHTzo/aXIKI5DgK8dwhJs7prMWj1a3qC7CeQvw2d01mLOrW9QITyF+GzumsxZ1a3qBCeQvxXDfHvBj/7TsjI/9Hz8C7uaSvR0LcOl8nSFrCdpP8H+hL+34iw//9k="
-                                         width="auto" height="auto" alt="Russian flag" />
-                                </div>
-
-
+                                
                                 <div class="flag">
 
                                     <img src="data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MSA2NC4xNDA5NDksIDIwMTAvMTIvMDctMTA6NTc6MDEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUuMSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVDRThDOUQ0MjcxQTExRTRCNjk4Q0NDMTQ0NUZFMjZCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVDRThDOUQ1MjcxQTExRTRCNjk4Q0NDMTQ0NUZFMjZCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUNFOEM5RDIyNzFBMTFFNEI2OThDQ0MxNDQ1RkUyNkIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NUNFOEM5RDMyNzFBMTFFNEI2OThDQ0MxNDQ1RkUyNkIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgICAgICAgICAgIDAwMDAwMDAwMDAQEBAQEBAQIBAQICAgECAgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP/wAARCAAUACYDAREAAhEBAxEB/8QAnwAAAgIDAAAAAAAAAAAAAAAABggECQABCwEAAAcAAwEAAAAAAAAAAAAAAAEDBQcICQIEBgoQAAAEBAQEAwUJAAAAAAAAAAEDBAURAhIGABMHCCEVFgkxIhdBgVIUCtIkVJUm1leXGhEAAQIEBAEGDAcBAAAAAAAAAQIDERIEBgAhBQcTMUFRIhQIgdIjQ1Njk9MkFVYXYXHRMlJilBj/2gAMAwEAAhEDEQA/AK6nDVyypVy4B1AaJYLFUQ5yPAc8wRj5/GOIiOzu7SlRTb2rwJ9ArG17Xes7riWkhd9WqFBIj8Y3lAflh3tMtEVN+WYhudOhuswpU1JnJUtXuDijSyoFhJT4iuNECJpUEk2ovtpoeDUyw40ZTxTAZWBZSgvEHXTrWvWxqz+lPaPqTztIjiPFtOTYHGSoORWmQpW0QZhKAFqiZIFqufeJ5jVGnNAqKKot92R+mdpkNvN1bDjKwhKnHFRKi89RlQaCCmeTMrbKlN1Gum3rAvB3td3uJdbKlEKU8lpu1cKJ9LQL0hK1AqUE5SStM4JjpT0xuUXnpTCzKQrhiWdC253GuTS29X0bRNSqKFzkW20VpmH7kzDIlJyP4855cejqe8VsjayWdK3Fuq2dKu3gIcepnKlLakcQTJihRUUkphMmZUqwpMxhHAR6uWV/ILR+cj9vDv8AZzdv6e1f2CsdX/q3utfXdqf7G/0xLTat2UJLgPqA0DBHJx5yPABXoQ+PwEYYMbO7tCMbe1eJ9QrCa+9Z3XCpBF9WrAKifi2/4qHR0mHhw7Lh9M93NlSpaYWm27AWoPUzyDNq+6BMEhxk80oiHQIwGmbGjze9tkJCYmsyh5ke8x81jm0V4KmgKXOPnT4mLxmxhVWjpd6K3jpq99e7Z9mGm+jG5wxsMWtrC6slpXBaisCEKmdiztTrJPt5M6qkEoFzAckBUEhISHCOKFXRc2iaxcmvPNtPBNFxHKmdlSJqdx1b6CmKSHklsLMEFQilSeXGm23uka1bVs2827qLUldXNL0wB0L4VamgLDqx5RPZVh9LTanCB1+ESYpMtdu+fs771e4tuPubd9t9tzTFg0c1StfT0uwm3Uu8HGwrxkZbVsxotmQ9wtUu0HOVrRmnts4IYGjIchlJNLACpy8Wn2e3etHT7CpW6pFa2XXHHkJLBSeG4QpEUrUlSTLzEDKHNDFIt7NqLocv55pp6mqKhimZaeWXiry6QouieCpiCrrGMZ5gesFAKJ/mb7nP4bbp/cDp+wMSd97bH6az2I95iJftFeHRSe1PiYkkfTQdzYspbJMm27RPTSFFw1fdBCsFiQ8av0DwDLJm9+CO9tkEjOsyPoR0H1mOQ2ju8A5UuY9Kekf0x0MsU/xaPAHdHpjzJF1p0JzjJDl3U/T/ADL5fMMp+S5r96yc6uFHlqj7Y4Rc7PMONJPzRhHwRw70Hz/gK+V9s7NN1uFxJY5csmUYQ5c4Qwdy00y0wpgFNMKaYcKYcIQ8MLYaTGOfLjeBgsZgYGP/2Q=="

@@ -68,9 +68,8 @@
     </Content>
     <Content Include="scripts\dependencies\angular.min.js" />
     <Content Include="scripts\mainCtrl.js" />
+    <Content Include="scripts\textsSrv.js" />
     <Content Include="scripts\transliterationSrv.js" />
-    <Content Include="texts\en_english.txt" />
-    <Content Include="texts\ro_romanian.txt" />
     <Content Include="dm-transliterator.html" />
   </ItemGroup>
   <ItemGroup>

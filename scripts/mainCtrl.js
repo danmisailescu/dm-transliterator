@@ -1,16 +1,11 @@
 ﻿angular.module("romanianChyrilicAndGreek", []);
 var romanianChyrilicAndGreekModule = angular.module("romanianChyrilicAndGreek");
 romanianChyrilicAndGreekModule.controller("MainCtrl",
-    ["$scope", "transliterationSrv",
-        function ($scope, transliterationSrv) {
+    ["$scope", "transliterationSrv", "textsSrv",
+        function ($scope, transliterationSrv, textsSrv) {
 
-            $scope.texts = {
-                pageDescription: "- Scrie limba română cu litere chirilice și grecești - Write romanian language with cyrillic and greek letters",
-                placeHolderRomanianLetters: "Textul scris cu litere românești...",
-                placeHolderGreekLetters: "Textul scris cu litere grecești (γρεκεσχτι)...",
-                placeHolderChyrilicLetters: "Textul scris cu litere chirilice (кирилике)..."
-            };
-            
+            $scope.texts = textsSrv.texts;
+           
             $scope.romanianLettersText = "";
             $scope.chyrilicLettersText = "";
             $scope.greekLettersText = "";
