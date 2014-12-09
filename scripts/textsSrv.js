@@ -23,7 +23,7 @@ romanianChyrilicAndGreekModule.factory('textsSrv',
                     description: "Because we are Romanians, both those who write using the latin alphabet and those who write using cyrillic or greek letters, I created this program to help all of us, who speak the same language, be more united. I hope this will be useful to you!"
                 },
                 russian: {
-                    title: "Ру́сский (Russian) - Напиши на Румынском языке с кириллицей или греческим буквам",
+                    title: "Ру́сский (Russian) - Напиши на румынском языке с кириллицей или греческим буквам",
                     description: "Потому что мы румыны, и тех кто пишет на латинице, и тех кто пишет на кириллице или греческом, я сделал эту программу, чтобы мы могли быть едины, все из нас, кто не говорит на одном языке. Пусть вам будет в пользу!"
                 }
             }

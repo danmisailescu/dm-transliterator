@@ -278,7 +278,7 @@ romanianChyrilicAndGreekModule.factory('transliterationSrv',
             corespondingLetter['țea'] = 'ця';
             corespondingLetter['ţea'] = 'ця';
             corespondingLetter['vea'] = 'вя';
-            corespondingLetter['xea'] = 'икся';
+            corespondingLetter['xea'] = 'кся';
             corespondingLetter['yea'] = 'ия';
             corespondingLetter['zea'] = 'зя';
 
@@ -303,7 +303,7 @@ romanianChyrilicAndGreekModule.factory('transliterationSrv',
             corespondingLetter['Țea'] = 'Ця';
             corespondingLetter['Ţea'] = 'Ця';
             corespondingLetter['Vea'] = 'Вя';
-            corespondingLetter['Xea'] = 'Икся';
+            corespondingLetter['Xea'] = 'Кся';
             corespondingLetter['Yea'] = 'Ия';
             corespondingLetter['Zea'] = 'Зя';
 
@@ -329,7 +329,7 @@ romanianChyrilicAndGreekModule.factory('transliterationSrv',
             corespondingLetter['ȚEA'] = 'ЦЯ';
             corespondingLetter['ŢEA'] = 'ЦЯ';
             corespondingLetter['VEA'] = 'ВЯ';
-            corespondingLetter['XEA'] = 'ИКСЯ';
+            corespondingLetter['XEA'] = 'КСЯ';
             corespondingLetter['YEA'] = 'ИЯ';
             corespondingLetter['ZEA'] = 'ЗЯ';
 
@@ -512,8 +512,8 @@ romanianChyrilicAndGreekModule.factory('transliterationSrv',
             corespondingLetter['V'] = 'В';
             corespondingLetter['w'] = 'в';
             corespondingLetter['W'] = 'В';
-            corespondingLetter['x'] = 'икс';
-            corespondingLetter['X'] = 'ИКС';
+            corespondingLetter['x'] = 'кс';
+            corespondingLetter['X'] = 'КС';
             corespondingLetter['y'] = 'и';
             corespondingLetter['Y'] = 'И';
             corespondingLetter['z'] = 'з';
